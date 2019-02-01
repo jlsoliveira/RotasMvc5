@@ -1,0 +1,17 @@
+﻿@model RotasMvc5.Models.Noticia
+@{
+    ViewBag.Title = "MostrarNoticias";
+}
+
+<h2>@Model.Titulo</h2>
+<em>
+    @Model.Data -   
+    @Html.ActionLink(@Model.Categoria, "MostrarCategoria", "Home", new
+        {
+            @categoria = Model.Categoria,
+        }, null);
+</em>
+<div>
+    @Model.Conteudo
+</div>
+
